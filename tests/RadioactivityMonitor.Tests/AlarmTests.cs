@@ -5,13 +5,10 @@ namespace RadioactivityMonitor.Tests
     /// </summary>
     public class AlarmTests
     {
-        private sealed class StubSensor : ISensor
+        private sealed class StubSensor(double value) : ISensor
         {
-            private readonly double _value;
-            public StubSensor(double value)
-            {
-                _value = value;
-            }
+            private readonly double _value = value;
+
             public double NextMeasure()
             {
                 return _value;
