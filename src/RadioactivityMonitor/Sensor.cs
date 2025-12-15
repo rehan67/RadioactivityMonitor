@@ -1,5 +1,3 @@
-using System;
-
 namespace RadioactivityMonitor
 {
     public class Sensor : ISensor
