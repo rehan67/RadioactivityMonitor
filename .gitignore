@@ -1,0 +1,31 @@
+# .NET build artifacts
+bin/
+obj/
+
+# Visual Studio files
+.vs/
+
+# User-specific files
+*.user
+*.userossc
+*.suo
+*.userprefs
+
+# Logs
+*.log
+
+# Test results
+TestResults/
+*.trx
+
+# Coverage
+coverage.cobertura.xml
+coverage.opencover.xml
+coverage.json
+
+# Docker
+.dockerignore
+
+# OS generated files
+Thumbs.db
+.DS_Store
