@@ -15,4 +15,4 @@ RUN dotnet test RadioactivityMonitor.sln -c Release --no-build --collect:"XPlat 
 FROM mcr.microsoft.com/dotnet/runtime:9.0 AS runner
 WORKDIR /app
 COPY --from=test /app/tests/RadioactivityMonitor.Tests/TestResults/ ./TestResults/
-CMD ["powershell", "-Command", "Get-ChildItem -Recurse ./TestResults; Start-Sleep -Seconds 3600"]
+CMD ["sh", "-c", "ls -la ./TestResults/ && sleep 3600"]
